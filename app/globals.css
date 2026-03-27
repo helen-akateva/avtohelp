@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+:root {
+    --orange: #F97316;
+    --orange-dark: #EA580C;
+    --navy: #1E3A5F;
+    --navy-dark: #152A47;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-sans);
+    color: #1a1a1a;
+    background: #ffffff;
+}
