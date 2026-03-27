@@ -14,5 +14,19 @@ html {
 body {
     font-family: var(--font-sans);
     color: #1a1a1a;
+    background: #F0F4F8;
+}
+
+/* Секції чергуються білий / сірий */
+.section-white {
     background: #ffffff;
+}
+
+.section-gray {
+    background: #F0F4F8;
+}
+
+/* Акцентний градієнт для CTA блоків */
+.section-navy {
+    background: linear-gradient(135deg, #1E3A5F 0%, #152A47 100%);
 }
