@@ -1,0 +1,17 @@
+export const oblastCities = [
+  { slug: 'brovary',      name: 'Бровари',      nameGen: 'Броварів' },
+  { slug: 'boryspil',     name: 'Бориспіль',    nameGen: 'Борисполя' },
+  { slug: 'irpin',        name: 'Ірпінь',       nameGen: 'Ірпеня' },
+  { slug: 'bucha',        name: 'Буча',         nameGen: 'Бучі' },
+  { slug: 'vyshhorod',    name: 'Вишгород',     nameGen: 'Вишгорода' },
+  { slug: 'bila-tserkva', name: 'Біла Церква',  nameGen: 'Білої Церкви' },
+  { slug: 'fastiv',       name: 'Фастів',       nameGen: 'Фастова' },
+  { slug: 'obukhiv',      name: 'Обухів',       nameGen: 'Обухова' },
+  { slug: 'vasylkiv',     name: 'Васильків',    nameGen: 'Василькова' },
+  { slug: 'boriodіanka',  name: 'Бородянка',    nameGen: 'Бородянки' },
+  { slug: 'pereiaslav',   name: 'Переяслав',    nameGen: 'Переяслава' },
+  { slug: 'makariv',      name: 'Макарів',      nameGen: 'Макарова' },
+  { slug: 'vyshneve',     name: 'Вишневе',      nameGen: 'Вишневого' },
+  { slug: 'hostomel',     name: 'Гостомель',    nameGen: 'Гостомеля' },
+  { slug: 'borshchahivka',name: 'Борщагівка',   nameGen: 'Борщагівки' },
+];

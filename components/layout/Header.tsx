@@ -43,9 +43,7 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#1E3A5F] shadow-xl">
       <div className="max-w-7xl mx-auto px-4 py-3 lg:py-0 lg:h-20 flex flex-col lg:flex-row lg:items-center justify-between gap-3 relative">
-        {/* ВЕРХНЯ ПАНЕЛЬ: Логотип + (на планшеті Номер і Месенджери) + Бургер */}
         <div className="flex items-center justify-between w-full lg:w-auto gap-4">
-          {/* Логотип */}
           <Link
             href="/"
             className="flex flex-col leading-tight z-[60] flex-shrink-0"
@@ -59,7 +57,6 @@ export default function Header() {
             </span>
           </Link>
 
-          {/* Контакти для ПЛАНШЕТА (видимі від md до lg) */}
           <div className="hidden md:flex lg:hidden items-center gap-4 z-[60]">
             <a
               href={PHONE_LINK}
@@ -93,7 +90,6 @@ export default function Header() {
             </div>
           </div>
 
-          {/* Мобільний блок (тільки до md) */}
           <div className="flex md:hidden items-center gap-3 z-[60]">
             <a
               href={PHONE_LINK}
@@ -109,7 +105,6 @@ export default function Header() {
             </button>
           </div>
 
-          {/* Бургер для планшета (md -> lg) */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="hidden md:block lg:hidden p-2 text-white border border-white/20 rounded-lg z-[60]"
@@ -118,7 +113,6 @@ export default function Header() {
           </button>
         </div>
 
-        {/* ДЕСКТОП НАВІГАЦІЯ */}
         <nav className="hidden lg:flex items-center gap-7">
           {navLinks.map((link) => (
             <Link
