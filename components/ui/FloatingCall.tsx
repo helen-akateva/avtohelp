@@ -63,7 +63,7 @@ export default function FloatingCall() {
               href={m.href}
               target="_blank"
               rel="noopener noreferrer"
-              className={`w-12 h-12 rounded-full ${m.color} shadow-xl flex items-center justify-center hover:scale-110 transition-transform`}
+              className={`w-12 h-12 rounded-full shadow-xl flex items-center justify-center hover:scale-110 transition-transform`}
             >
               <Image src={m.icon} alt="social" width={24} height={24} unoptimized />
             </a>
