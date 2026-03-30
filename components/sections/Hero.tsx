@@ -22,7 +22,7 @@ export default function Hero() {
           className="object-cover object-center"
         />
         {/* Темний оверлей зліва — щоб текст читався */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1E3A5F]/95 via-[#1E3A5F]/80 to-[#1E3A5F]/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1E3A5F]/80 via-[#1E3A5F]/70 to-[#1E3A5F]/30" />
       </div>
 
       {/* КОНТЕНТ */}

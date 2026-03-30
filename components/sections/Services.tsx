@@ -1,3 +1,12 @@
+"use client";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import Image from "next/image";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
 const services = [
   {
     icon: "🚗",
@@ -31,16 +40,19 @@ const services = [
   },
 ];
 
-const galleryPlaceholders = [1, 2, 3, 4, 5];
+// Всі 16 фото з public/images/
+const galleryImages = Array.from({ length: 16 }, (_, i) => ({
+  src: `/images/${i + 1}.webp`,
+  alt: `Евакуатор AvtoHelp — робота ${i + 1}`,
+}));
 
 export default function Services() {
   return (
     <section id="services" className="bg-white py-12 lg:py-24">
       <div className="max-w-7xl mx-auto px-4">
-
         {/* Заголовок */}
         <header className="text-center mb-10 md:mb-16">
-          <h2 className="text-2xl sm:text-4xl font-black text-[#1E3A5F] mb-3 leading-tight px-2">
+          <h2 className="text-2xl sm:text-4xl font-black text-[#1E3A5F] mb-3 leading-tight">
             Які авто та ситуації ми обслуговуємо
           </h2>
           <p className="text-gray-500 text-sm sm:text-lg max-w-xl mx-auto">
@@ -48,54 +60,91 @@ export default function Services() {
           </p>
         </header>
 
-        {/* Картки послуг — на мобільних grid-cols-1 */}
+        {/* Картки послуг */}
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-16">
           {services.map((service) => (
             <li
               key={service.title}
               className="flex flex-col gap-4 p-6 rounded-[24px] border border-gray-100 bg-[#F0F4F8] hover:border-[#F97316]/40 hover:shadow-lg transition-all group"
             >
-              <span className="text-5xl" aria-hidden="true">{service.icon}</span>
-              <article>
+              <span className="text-5xl" aria-hidden="true">
+                {service.icon}
+              </span>
+              <div>
                 <h3 className="font-black text-[#1E3A5F] text-lg sm:text-xl mb-2 leading-tight group-hover:text-[#F97316] transition-colors">
                   {service.title}
                 </h3>
                 <p className="text-gray-500 text-sm sm:text-base leading-relaxed">
                   {service.text}
                 </p>
-              </article>
+              </div>
             </li>
           ))}
         </ul>
 
-        {/* Галерея */}
-        <article className="mt-10">
-          <h3 className="text-xl font-black text-[#1E3A5F] mb-6 text-center">
+        {/* Галерея Swiper */}
+        <div>
+          <h3 className="text-2xl font-black text-[#1E3A5F] mb-8 text-center">
             Фото наших робіт
           </h3>
 
-          <div 
-            className="flex gap-4 overflow-x-auto pb-6 snap-x snap-mandatory scrollbar-hide px-2"
+          <Swiper
+            modules={[Navigation, Pagination, Autoplay]}
+            spaceBetween={16}
+            slidesPerView={1}
+            navigation
+            pagination={{ clickable: true }}
+            autoplay={{ delay: 3500, disableOnInteraction: false }}
+            loop
+            breakpoints={{
+              640: { slidesPerView: 2, spaceBetween: 20 },
+              1024: { slidesPerView: 3, spaceBetween: 24 },
+            }}
+            className="!pb-12"
           >
-            {galleryPlaceholders.map((n) => (
-              <div
-                key={n}
-                className="flex-shrink-0 w-[85%] sm:w-80 h-56 rounded-[24px] bg-[#F0F4F8] border-2 border-dashed border-gray-200 flex flex-col items-center justify-center gap-2 text-gray-300 snap-center"
-              >
-                <span className="text-5xl" aria-hidden="true">📷</span>
-                <span className="text-sm font-bold uppercase tracking-wider">Приклад роботи {n}</span>
-              </div>
+            {galleryImages.map((img, i) => (
+              <SwiperSlide key={i}>
+                <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-md group">
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                </div>
+              </SwiperSlide>
             ))}
-          </div>
-
-          <footer className="text-center mt-4">
-            <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">
-              * Галерея в процесі наповнення
-            </p>
-          </footer>
-        </article>
-
+          </Swiper>
+        </div>
       </div>
+
+      {/* Стилі для Swiper стрілок і крапок */}
+      <style jsx global>{`
+        .swiper-button-next,
+        .swiper-button-prev {
+          color: #1e3a5f !important;
+          background: rgba(255, 255, 255, 0.15) !important;
+          backdrop-filter: blur(4px);
+          width: 42px !important;
+          height: 42px !important;
+          border-radius: 12px;
+         
+          box-shadow: none;
+        }
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+          font-size: 14px !important;
+          font-weight: 700;
+        }
+        .swiper-pagination-bullet-active {
+          background: #f97316 !important;
+        }
+        .swiper-pagination-bullet {
+          background: #1e3a5f;
+          opacity: 0.3;
+        }
+      `}</style>
     </section>
   );
 }
