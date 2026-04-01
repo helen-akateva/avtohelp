@@ -10,7 +10,7 @@ import {
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden min-h-[100svh] sm:min-h-[90vh] flex items-center">
+    <section className="relative overflow-hidden min-h-[100svh] sm:min-h-[90vh] flex items-center bg-[#1E3A5F]">
       {/* ФОН */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -18,6 +18,7 @@ export default function Hero() {
           alt=""
           fill
           priority
+          fetchPriority="high"
           className="object-cover object-[35%_80%] sm:object-[center_60%] lg:object-center"
         />
         {/* Мобільний — темніший оверлей знизу вгору */}
