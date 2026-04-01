@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: [],
     },
-    sitemap: "https://avtohelp.ua/sitemap.xml",
+    sitemap: "https://avtohelp-three.vercel.app/sitemap.xml",
   };
 }

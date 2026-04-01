@@ -94,22 +94,27 @@ export default function Header() {
             <a
               href={PHONE_LINK}
               className="bg-[#F97316] p-2.5 rounded-full shadow-lg"
+              aria-label={`Зателефонувати ${PHONE_DISPLAY}`}
             >
-              <Phone size={20} className="text-white fill-current" />
+              <Phone size={20} className="text-white fill-current" aria-hidden="true" />
             </a>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 text-white border border-white/20 rounded-lg"
+              aria-label={isOpen ? "Закрити меню" : "Відкрити меню"}
+              aria-expanded={isOpen}
             >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
+              {isOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
             </button>
           </div>
 
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="hidden md:block lg:hidden p-2 text-white border border-white/20 rounded-lg z-[60]"
+            aria-label={isOpen ? "Закрити меню" : "Відкрити меню"}
+            aria-expanded={isOpen}
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
           </button>
         </div>
 

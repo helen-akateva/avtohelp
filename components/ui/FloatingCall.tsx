@@ -12,9 +12,9 @@ import {
 } from "@/lib/constants";
 
 const messengers = [
-  { href: VIBER_LINK, icon: "/icons/viber.svg", color: "bg-[#7360F2]" },
-  { href: TELEGRAM_LINK, icon: "/icons/telegram.svg", color: "bg-[#2AABEE]" },
-  { href: WHATSAPP_LINK, icon: "/icons/whatsapp.svg", color: "bg-[#25D366]" },
+  { href: VIBER_LINK, icon: "/icons/viber.svg", label: "Viber", color: "bg-[#7360F2]" },
+  { href: TELEGRAM_LINK, icon: "/icons/telegram.svg", label: "Telegram", color: "bg-[#2AABEE]" },
+  { href: WHATSAPP_LINK, icon: "/icons/whatsapp.svg", label: "WhatsApp", color: "bg-[#25D366]" },
 ];
 
 export default function FloatingCall() {
@@ -51,21 +51,22 @@ export default function FloatingCall() {
           <a
             href={PHONE_LINK}
             className="w-12 h-12 rounded-full bg-white shadow-xl flex items-center justify-center hover:scale-110 transition-transform border border-gray-100"
-            title={PHONE_DISPLAY}
+            aria-label={`Зателефонувати ${PHONE_DISPLAY}`}
           >
-            <Phone size={20} className="text-[#F97316] fill-[#F97316]" />
+            <Phone size={20} className="text-[#F97316] fill-[#F97316]" aria-hidden="true" />
           </a>
 
           {/* Месенджери (теж круглі) */}
-          {messengers.map((m, idx) => (
+          {messengers.map((m) => (
             <a
-              key={idx}
+              key={m.label}
               href={m.href}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label={`Написати у ${m.label}`}
               className={`w-12 h-12 rounded-full shadow-xl flex items-center justify-center hover:scale-110 transition-transform`}
             >
-              <Image src={m.icon} alt="social" width={24} height={24} unoptimized />
+              <Image src={m.icon} alt="" width={24} height={24} unoptimized />
             </a>
           ))}
         </nav>

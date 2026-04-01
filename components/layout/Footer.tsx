@@ -31,11 +31,11 @@ export default function Footer() {
         {/* Колонка 1 — Лого і опис */}
         <section className="flex flex-col gap-4">
           <div>
-            <div className="text-2xl font-black" aria-label="AvtoHelp Logo">
+            <div className="text-2xl font-black">
               <span className="text-white">Avto</span>
               <span className="text-[#F97316]">Help</span>
             </div>
-            <p className="text-white/50 text-xs uppercase tracking-wider mt-1">
+            <p className="text-white/60 text-xs uppercase tracking-wider mt-1">
               Евакуатор Київ та Київська область
             </p>
           </div>
@@ -96,7 +96,7 @@ export default function Footer() {
               <Phone size={18} className="fill-white text-white" aria-hidden="true" />
             </div>
             <div>
-              <p className="text-xs text-white/40">Телефон</p>
+              <p className="text-xs text-white/60">Телефон</p>
               <p className="font-black text-white group-hover:text-[#F97316] transition-colors">
                 {PHONE_DISPLAY}
               </p>
@@ -108,7 +108,7 @@ export default function Footer() {
               <Clock size={18} className="text-[#F97316]" aria-hidden="true" />
             </div>
             <div>
-              <p className="text-xs text-white/40">Режим роботи</p>
+              <p className="text-xs text-white/60">Режим роботи</p>
               <p className="font-bold text-white">Цілодобово, 24/7/365</p>
             </div>
           </div>
@@ -118,10 +118,10 @@ export default function Footer() {
       {/* Копірайт */}
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 py-5 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <small className="text-white/40 text-sm">
+          <small className="text-white/60 text-sm">
             © 2026 AvtoHelp. Всі права захищені
           </small>
-          <p className="text-white/20 text-xs uppercase tracking-tighter">
+          <p className="text-white/40 text-xs uppercase tracking-tighter">
             Евакуатор Київ та Київська область
           </p>
         </div>

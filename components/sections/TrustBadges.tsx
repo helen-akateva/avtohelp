@@ -45,9 +45,9 @@ export default function TrustBadges() {
               </span>
               
               <div>
-                <h3 className="font-black text-[#1E3A5F] text-lg lg:text-xl group-hover:text-[#F97316] transition-colors leading-tight">
+                <h2 className="font-black text-[#1E3A5F] text-lg lg:text-xl group-hover:text-[#F97316] transition-colors leading-tight">
                   {badge.title}
-                </h3>
+                </h2>
                 <p className="text-gray-500 text-sm mt-2 leading-relaxed">
                   {badge.text}
                 </p>
