@@ -17,8 +17,8 @@ export default function Hero() {
           src="/images/1.webp"
           alt=""
           fill
-          priority
-          fetchPriority="high"
+          preload
+          quality={60}
           className="object-cover object-[35%_80%] sm:object-[center_60%] lg:object-center"
         />
         {/* Мобільний — темніший оверлей знизу вгору */}

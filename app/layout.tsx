@@ -3,7 +3,7 @@ import { Geist } from 'next/font/google';
 import './globals.css';
 import { SITE_NAME, SITE_DESCRIPTION, PHONE_DISPLAY } from '@/lib/constants';
 
-const geist = Geist({ subsets: ['latin'] });
+const geist = Geist({ subsets: ['latin'], display: 'swap', preload: true });
 
 export const metadata: Metadata = {
   title: `Евакуатор Київ — виклик 24/7 | ${SITE_NAME}`,

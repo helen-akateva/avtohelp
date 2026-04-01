@@ -1,12 +1,14 @@
 import Header from "@/components/layout/Header";
 import Hero from "@/components/sections/Hero";
 import TrustBadges from "@/components/sections/TrustBadges";
-import Prices from "@/components/sections/Prices";
-import Services from "@/components/sections/Services";
-import ServiceZones from "@/components/sections/ServiceZones";
-import HowToOrder from "@/components/sections/HowToOrder";
-import FAQ from "@/components/sections/FAQ";
-import FinalCTA from "@/components/sections/FinalCTA";
+import dynamic from "next/dynamic";
+
+const Prices = dynamic(() => import("@/components/sections/Prices"));
+const Services = dynamic(() => import("@/components/sections/Services"));
+const ServiceZones = dynamic(() => import("@/components/sections/ServiceZones"));
+const HowToOrder = dynamic(() => import("@/components/sections/HowToOrder"));
+const FAQ = dynamic(() => import("@/components/sections/FAQ"));
+const FinalCTA = dynamic(() => import("@/components/sections/FinalCTA"));
 import Footer from "@/components/layout/Footer";
 import FloatingCall from "@/components/ui/FloatingCall";
 
