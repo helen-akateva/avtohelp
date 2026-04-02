@@ -8,7 +8,7 @@ const geist = Geist({ subsets: ['latin'], display: 'optional', preload: true });
 export const metadata: Metadata = {
   title: `Евакуатор Київ — виклик 24/7 | ${SITE_NAME}`,
   description: `${SITE_DESCRIPTION}. Подача від 1500 грн · 70 грн/км. Телефон: ${PHONE_DISPLAY}`,
-  metadataBase: new URL('https://avtohelp-three.vercel.app'),
+  metadataBase: new URL('https://evakuator-avtohelp.com.ua'),
 };
 
 export default function RootLayout({

@@ -2,7 +2,7 @@ import { kyivDistricts } from "@/lib/data/kyiv-districts";
 import { oblastCities } from "@/lib/data/oblast-cities";
 import { MetadataRoute } from "next";
 
-const BASE_URL = "https://avtohelp-three.vercel.app";
+const BASE_URL = "https://evakuator-avtohelp.com.ua";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const districtRoutes = kyivDistricts.map((d) => ({

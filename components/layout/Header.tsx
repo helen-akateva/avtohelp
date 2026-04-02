@@ -46,6 +46,7 @@ export default function Header() {
         <div className="flex items-center justify-between w-full lg:w-auto gap-4">
           <Link
             href="/"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="flex flex-col leading-tight z-[60] flex-shrink-0"
           >
             <div className="text-xl sm:text-2xl font-black tracking-tight">
@@ -96,7 +97,11 @@ export default function Header() {
               className="bg-[#F97316] p-2.5 rounded-full shadow-lg"
               aria-label={`Зателефонувати ${PHONE_DISPLAY}`}
             >
-              <Phone size={20} className="text-white fill-current" aria-hidden="true" />
+              <Phone
+                size={20}
+                className="text-white fill-current"
+                aria-hidden="true"
+              />
             </a>
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -104,7 +109,11 @@ export default function Header() {
               aria-label={isOpen ? "Закрити меню" : "Відкрити меню"}
               aria-expanded={isOpen}
             >
-              {isOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
+              {isOpen ? (
+                <X size={24} aria-hidden="true" />
+              ) : (
+                <Menu size={24} aria-hidden="true" />
+              )}
             </button>
           </div>
 
@@ -114,7 +123,11 @@ export default function Header() {
             aria-label={isOpen ? "Закрити меню" : "Відкрити меню"}
             aria-expanded={isOpen}
           >
-            {isOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
+            {isOpen ? (
+              <X size={24} aria-hidden="true" />
+            ) : (
+              <Menu size={24} aria-hidden="true" />
+            )}
           </button>
         </div>
 
