@@ -60,7 +60,6 @@ export default async function DistrictPage({ params }: Props) {
       />
       <Header />
       <main className="pt-20">
-        {/* HERO */}
         <section className="relative overflow-hidden min-h-[60vh] flex items-center bg-[#1E3A5F]">
           <div className="absolute inset-0 z-0">
             <Image
@@ -102,7 +101,6 @@ export default async function DistrictPage({ params }: Props) {
                   {PHONE_DISPLAY}
                 </a>
 
-                {/* Соціальні мережі з aria-labels */}
                 <nav
                   className="flex gap-3"
                   aria-label="Зв'язок через месенджери"
@@ -158,7 +156,6 @@ export default async function DistrictPage({ params }: Props) {
           </div>
         </section>
 
-        {/* Секції переваг та цін */}
         <TrustBadges />
         <Prices />
         <Services />
@@ -199,7 +196,7 @@ export default async function DistrictPage({ params }: Props) {
         </p>
               <a
                 href={PHONE_LINK}
-                className="flex items-center justify-center gap-2 bg-[#F97316] hover:bg-[#EA580C] text-white font-black rounded-2xl transition-all active:scale-95 shadow-lg /* Мобільні стилі */ w-full py-4 px-2 text-lg xs:text-xl whitespace-nowrap /* Планшет/Десктоп */ sm:w-auto sm:px-8 sm:text-2xl"
+                className="flex items-center justify-center gap-2 bg-[#F97316] hover:bg-[#EA580C] text-white font-black rounded-2xl transition-all active:scale-95 shadow-lg w-full py-4 px-2 text-lg xs:text-xl whitespace-nowrap sm:w-auto sm:px-8 sm:text-2xl"
               >
                 <Phone size={20} className="fill-white shrink-0" />
                 <span className="tabular-nums tracking-tight">

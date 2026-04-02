@@ -19,13 +19,11 @@ export default function FinalCTA() {
     <section id="contacts" className="bg-gradient-to-br from-[#1E3A5F] via-[#1a3356] to-[#152A47] py-16 lg:py-24">
       <div className="max-w-4xl mx-auto px-4 text-center flex flex-col items-center gap-6 sm:gap-8">
 
-        {/* Бейдж */}
         <div className="inline-flex items-center gap-2 bg-[#F97316]/20 border border-[#F97316]/40 rounded-full px-4 py-1.5">
           <span className="w-2 h-2 rounded-full bg-[#F97316] animate-pulse" />
           <span className="text-[#F97316] text-[12px] sm:text-sm font-bold uppercase tracking-wider">Працюємо 24/7 · 365 днів</span>
         </div>
 
-        {/* Заголовок */}
         <div className="flex flex-col gap-3">
           <h2 className="text-3xl sm:text-5xl font-black text-white leading-tight">
             Потрібен евакуатор <br className="sm:hidden" />
@@ -36,7 +34,6 @@ export default function FinalCTA() {
           </p>
         </div>
 
-        {/* Номер телефону — Адаптований під мобільний */}
         <a
           href={PHONE_LINK}
           className="flex items-center justify-center gap-3 bg-[#F97316] text-white font-black text-[18px] xs:text-[22px] sm:text-3xl px-4 sm:px-10 py-5 sm:py-7 rounded-[24px] sm:rounded-3xl shadow-2xl shadow-orange-500/40 transition-all active:scale-95 w-full sm:w-auto whitespace-nowrap"
@@ -45,14 +42,12 @@ export default function FinalCTA() {
           {PHONE_DISPLAY}
         </a>
 
-        {/* Розділювач */}
         <div className="flex items-center gap-4 w-full max-w-[280px] sm:max-w-sm">
           <div className="flex-1 h-px bg-white/10" />
           <span className="text-white/40 text-[10px] sm:text-sm font-bold uppercase tracking-widest whitespace-nowrap">або напишіть</span>
           <div className="flex-1 h-px bg-white/10" />
         </div>
 
-        {/* Месенджери іконками в ряд */}
         <nav className="flex gap-4">
           {messengers.map((m, idx) => (
             <a

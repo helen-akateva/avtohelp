@@ -30,7 +30,6 @@ export default function FloatingCall() {
   return (
     <aside className="fixed bottom-6 right-4 sm:right-8 lg:right-12 z-50 flex flex-col items-end pointer-events-none">
       
-      {/* Затемнення фону */}
       {isOpen && (
         <div
           className="fixed inset-0 z-40 bg-black/30 backdrop-blur-sm pointer-events-auto transition-opacity"
@@ -38,16 +37,13 @@ export default function FloatingCall() {
         />
       )}
 
-      {/* Контейнер меню та кнопки */}
       <div className={`relative z-50 flex flex-col items-end gap-3 transition-all duration-500 pointer-events-auto ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       }`}>
 
-        {/* Спливаючі кнопки */}
         <nav className={`flex flex-col items-end gap-3 mb-2 transition-all duration-300 origin-bottom ${
           isOpen ? "scale-100 opacity-100" : "scale-50 opacity-0 pointer-events-none"
         }`}>
-          {/* Маленька кругла кнопка телефону */}
           <a
             href={PHONE_LINK}
             className="w-12 h-12 rounded-full bg-white shadow-xl flex items-center justify-center hover:scale-110 transition-transform border border-gray-100"
@@ -56,7 +52,6 @@ export default function FloatingCall() {
             <Phone size={20} className="text-[#F97316] fill-[#F97316]" aria-hidden="true" />
           </a>
 
-          {/* Месенджери (теж круглі) */}
           {messengers.map((m) => (
             <a
               key={m.label}
@@ -71,9 +66,7 @@ export default function FloatingCall() {
           ))}
         </nav>
 
-        {/* Головна кругла кнопка */}
         <div className="relative">
-          {/* Пульсуюче кільце (тільки коли закрита) */}
           {!isOpen && (
             <span className="absolute inset-0 rounded-full bg-[#F97316] animate-ping opacity-40" />
           )}

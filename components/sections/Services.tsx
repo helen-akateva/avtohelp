@@ -40,7 +40,6 @@ const services = [
   },
 ];
 
-// Всі 16 фото з public/images/
 const galleryImages = Array.from({ length: 16 }, (_, i) => ({
   src: `/images/${i + 1}.webp`,
   alt: `Евакуатор AvtoHelp — робота ${i + 1}`,
@@ -50,7 +49,6 @@ export default function Services() {
   return (
     <section id="services" className="bg-white py-12 lg:py-24">
       <div className="max-w-7xl mx-auto px-4">
-        {/* Заголовок */}
         <header className="text-center mb-10 md:mb-16">
           <h2 className="text-2xl sm:text-4xl font-black text-[#1E3A5F] mb-3 leading-tight">
             Які авто та ситуації ми обслуговуємо
@@ -60,7 +58,6 @@ export default function Services() {
           </p>
         </header>
 
-        {/* Картки послуг */}
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-16">
           {services.map((service) => (
             <li
@@ -82,7 +79,6 @@ export default function Services() {
           ))}
         </ul>
 
-        {/* Галерея Swiper */}
         <div>
           <h3 className="text-2xl font-black text-[#1E3A5F] mb-8 text-center">
             Фото наших робіт
@@ -119,7 +115,6 @@ export default function Services() {
         </div>
       </div>
 
-      {/* Стилі для Swiper стрілок і крапок */}
       <style jsx global>{`
         .swiper-button-next,
         .swiper-button-prev {

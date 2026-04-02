@@ -130,7 +130,6 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* ДЕСКТОП ПРАВА ЧАСТИНА (Номер + Месенджери) */}
         <div className="hidden lg:flex items-center gap-5">
           <a
             href={PHONE_LINK}
@@ -165,7 +164,6 @@ export default function Header() {
           </div>
         </div>
 
-        {/* МЕСЕНДЖЕРИ ДЛЯ МОБІЛОК (другий ряд, тільки до md) */}
         <div
           className={`flex md:hidden items-center justify-center gap-6 mt-1 transition-opacity ${isOpen ? "opacity-0" : "opacity-100"}`}
         >

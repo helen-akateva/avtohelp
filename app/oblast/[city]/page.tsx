@@ -59,7 +59,6 @@ export default async function CityPage({ params }: Props) {
       />
       <Header />
       <main className="pt-20">
-        {/* HERO */}
         <section className="relative overflow-hidden min-h-[60vh] flex items-center bg-[#1E3A5F]">
           <div className="absolute inset-0 z-0">
             <Image
@@ -155,7 +154,6 @@ export default async function CityPage({ params }: Props) {
         <Prices />
         <Services />
 
-        {/* SEO текст */}
         <section className="bg-white py-12">
           <div className="max-w-4xl mx-auto px-4 flex flex-col gap-8">
             <article className="prose prose-slate max-w-none">
@@ -179,7 +177,6 @@ export default async function CityPage({ params }: Props) {
               </div>
             </article>
 
-            {/* CTA */}
             <aside className="p-8 bg-[#1E3A5F] rounded-3xl text-white text-center flex flex-col items-center gap-4 shadow-xl">
               <h3 className="font-black text-xl sm:text-2xl text-white">
                 Потрібен евакуатор у {city.name}?

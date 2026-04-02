@@ -27,7 +27,6 @@ export default function HowToOrder() {
     <section id="how" className="bg-white py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4">
 
-        {/* Заголовок */}
         <header className="text-center mb-14">
           <h2 className="text-3xl sm:text-4xl font-black text-[#1E3A5F] mb-3">
             Як викликати евакуатор — 3 кроки
@@ -37,9 +36,7 @@ export default function HowToOrder() {
           </p>
         </header>
 
-        {/* Кроки як впорядкований список */}
         <div className="relative">
-          {/* Лінія між кроками (desktop) */}
           <div 
             className="hidden lg:block absolute top-16 left-[calc(16.66%+32px)] right-[calc(16.66%+32px)] h-0.5 bg-[#F97316] opacity-20 z-0" 
             aria-hidden="true" 
@@ -49,25 +46,21 @@ export default function HowToOrder() {
             {steps.map((step, i) => (
               <li key={step.number} className="flex flex-col items-center lg:items-start text-center lg:text-left gap-4">
                 
-                {/* Номер + іконка */}
                 <div className="flex items-center gap-4">
                   <div className="relative flex-shrink-0">
                     <div className="w-16 h-16 rounded-2xl bg-[#1E3A5F] flex items-center justify-center shadow-lg">
                       <span className="text-2xl font-black text-[#F97316]">{step.number}</span>
                     </div>
-                    {/* Іконка */}
                     <div className="absolute -top-2 -right-2 text-xl" aria-hidden="true">
                       {step.icon}
                     </div>
                   </div>
 
-                  {/* Стрілка (mobile) */}
                   {i < steps.length - 1 && (
                     <div className="lg:hidden text-2xl text-gray-200" aria-hidden="true">→</div>
                   )}
                 </div>
 
-                {/* Текст кроку */}
                 <article>
                   <h3 className="font-black text-[#1E3A5F] text-lg leading-snug mb-2">
                     {step.title}
@@ -81,7 +74,6 @@ export default function HowToOrder() {
           </ol>
         </div>
 
-        {/* CTA */}
         <div className="mt-14 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
             href={PHONE_LINK}

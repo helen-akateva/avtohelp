@@ -29,7 +29,6 @@ export default function TrustBadges() {
   return (
     <section className="bg-white py-12 sm:py-16">
       <div className="max-w-7xl mx-auto px-4">
-        {/* Використовуємо список для кращої семантики */}
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {badges.map((badge) => (
             <li

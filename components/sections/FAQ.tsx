@@ -36,7 +36,6 @@ const faqs = [
   },
 ];
 
-// JSON-LD схема для SEO
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -69,7 +68,6 @@ function FAQItem({
     <div
       className={`border rounded-2xl overflow-hidden transition-all ${isOpen ? "border-[#F97316]/40 shadow-md" : "border-gray-100"}`}
     >
-      {/* Питання як заголовок для SEO та навігації */}
       <h3>
         <button
           id={buttonId}
@@ -132,7 +130,6 @@ export default function FAQ() {
           </p>
         </header>
 
-        {/* Контейнер акордеона */}
         <div className="flex flex-col gap-3">
           {faqs.map((faq, i) => (
             <FAQItem

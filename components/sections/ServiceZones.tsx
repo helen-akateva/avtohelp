@@ -33,7 +33,6 @@ export default function ServiceZones() {
   return (
     <section id="zones" className="bg-[#F0F4F8] py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4">
-        {/* Заголовок */}
         <header className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-black text-[#1E3A5F] mb-3">
             Де працює евакуатор
@@ -46,9 +45,7 @@ export default function ServiceZones() {
         </header>
 
         <div className="grid lg:grid-cols-2 gap-8 items-start">
-          {/* ЛІВА ЧАСТИНА — Райони і міста */}
           <div className="flex flex-col gap-6">
-            {/* Райони Києва */}
             <article className="bg-white rounded-3xl p-6 border border-gray-100 shadow-sm">
               <div className="flex items-center gap-3 mb-5">
                 <div
@@ -67,7 +64,6 @@ export default function ServiceZones() {
                 </div>
               </div>
 
-              {/* Перетворили на список для SEO */}
               <ul
                 className="flex flex-wrap gap-2"
                 aria-label="Список районів Києва"
@@ -83,7 +79,6 @@ export default function ServiceZones() {
               </ul>
             </article>
 
-            {/* Міста Київської області */}
             <article className="bg-white rounded-3xl p-6 border border-gray-100 shadow-sm">
               <div className="flex items-center gap-3 mb-5">
                 <div
@@ -117,7 +112,6 @@ export default function ServiceZones() {
               </ul>
             </article>
 
-            {/* Банер */}
             <aside className="bg-gradient-to-r from-[#1E3A5F] to-[#2a4f7c] rounded-3xl p-6 text-white">
               <p className="font-black text-lg mb-1">Не знайшли своє місто?</p>
               <p className="text-white/70 text-sm">
@@ -126,7 +120,6 @@ export default function ServiceZones() {
             </aside>
           </div>
 
-          {/* ПРАВА ЧАСТИНА — Карта */}
           <figure className="bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden m-0">
             <figcaption className="p-5 border-b border-gray-100">
               <h3 className="font-black text-[#1E3A5F] flex items-center gap-2">

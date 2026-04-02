@@ -47,15 +47,12 @@ export default function Prices() {
               <tbody className="text-[#1E3A5F]">
                 {priceRows.map((row, i) => (
                   <tr key={i} className="border-b border-gray-50 last:border-0">
-                    {/* ТЕКСТ ТИПУ: Повернув Bold та колір #1E3A5F */}
                     <td className="px-4 py-5 md:px-8 md:py-8 text-xs sm:text-lg font-bold leading-tight">
                       {row.type}
                     </td>
-                    {/* ЦІНА ПОДАЧІ: Повернув Black та колір #F97316 */}
                     <td className="px-2 py-5 md:px-6 md:py-8 text-center text-[11px] sm:text-lg font-black text-[#F97316]">
                       {row.base}
                     </td>
-                    {/* ЦІНА ЗА КМ: Повернув Black */}
                     <td className="px-4 py-5 md:px-8 md:py-8 text-right text-[11px] sm:text-lg font-black whitespace-nowrap">
                       {row.perKm}
                     </td>
@@ -65,7 +62,6 @@ export default function Prices() {
             </table>
           </div>
 
-          {/* ЛАФЕТА */}
           <div className="px-6 py-6 md:px-10 md:py-10 border-t border-gray-50">
             <h3 className="text-[#1E3A5F] font-black text-sm md:text-xl mb-4 flex items-center gap-2">
               <span className="text-[#F97316]">TOP</span> Додаткова послуга — Лафета:
@@ -80,7 +76,6 @@ export default function Prices() {
             </ul>
           </div>
 
-          {/* КНОПКА: ВИПРАВЛЕНО РОЗМІР ШРИФТУ ТА ВІДСТУПИ */}
           <div className="px-3 py-8 md:px-12 md:py-12 bg-gray-50/50 border-t border-gray-100 flex flex-col items-center">
             <a
               href={PHONE_LINK}

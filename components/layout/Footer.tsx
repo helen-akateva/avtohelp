@@ -25,10 +25,8 @@ export default function Footer() {
   return (
     <footer className="bg-[#0f2337] text-white">
 
-      {/* Основна частина */}
       <div className="max-w-7xl mx-auto px-4 py-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
-        {/* Колонка 1 — Лого і опис */}
         <section className="flex flex-col gap-4">
           <div>
             <div className="text-2xl font-black">
@@ -43,7 +41,6 @@ export default function Footer() {
             Професійні послуги евакуатора у Києві та Київській області. Швидко, прозоро, цілодобово.
           </p>
           
-          {/* Месенджери */}
           <nav aria-label="Наші месенджери">
             <ul className="flex gap-3 mt-2 list-none p-0">
               {messengers.map((m) => (
@@ -63,7 +60,6 @@ export default function Footer() {
           </nav>
         </section>
 
-        {/* Колонка 2 — Навігація */}
         <nav className="flex flex-col gap-3" aria-label="Допоміжна навігація">
           <h3 className="font-black text-white text-sm uppercase tracking-wider mb-1">
             Навігація
@@ -82,7 +78,6 @@ export default function Footer() {
           </ul>
         </nav>
 
-        {/* Колонка 3 — Контакти */}
         <address className="flex flex-col gap-4 not-italic">
           <h3 className="font-black text-white text-sm uppercase tracking-wider">
             Контакти
@@ -115,7 +110,6 @@ export default function Footer() {
         </address>
       </div>
 
-      {/* Копірайт */}
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 py-5 flex flex-col sm:flex-row items-center justify-between gap-2">
           <small className="text-white/60 text-sm">
