@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: `Евакуатор Київ — виклик 24/7 | ${SITE_NAME}`,
   description: `${SITE_DESCRIPTION}. Подача від 1500 грн · 70 грн/км. Телефон: ${PHONE_DISPLAY}`,
   metadataBase: new URL('https://evakuator-avtohelp.com.ua'),
+  verification: {
+    google: 'vhIu89eOLQKGIzZKFWyFS55xcVgq4d9hMUs6bfMrJtU',
+  },
 };
 
 export default function RootLayout({
