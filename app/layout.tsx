@@ -1,17 +1,17 @@
-import type { Metadata } from "next";
-import { Geist } from "next/font/google";
-import Script from "next/script";
-import "./globals.css";
-import { SITE_NAME, SITE_DESCRIPTION, PHONE_DISPLAY } from "@/lib/constants";
+import type { Metadata } from 'next';
+import { Geist } from 'next/font/google';
+import Script from 'next/script';
+import './globals.css';
+import { SITE_NAME, SITE_DESCRIPTION, PHONE_DISPLAY } from '@/lib/constants';
 
-const geist = Geist({ subsets: ["latin"], display: "optional", preload: true });
+const geist = Geist({ subsets: ['latin'], display: 'optional', preload: true });
 
 export const metadata: Metadata = {
   title: `Евакуатор Київ — виклик 24/7 | ${SITE_NAME}`,
   description: `${SITE_DESCRIPTION}. Подача від 1500 грн · 70 грн/км. Телефон: ${PHONE_DISPLAY}`,
-  metadataBase: new URL("https://evakuator-avtohelp.com.ua"),
+  metadataBase: new URL('https://evakuator-avtohelp.com.ua'),
   verification: {
-    google: "vhIu89eOLQKGIzZKFWyFS55xcVgq4d9hMUs6bfMrJtU",
+    google: 'vhIu89eOLQKGIzZKFWyFS55xcVgq4d9hMUs6bfMrJtU',
   },
 };
 
@@ -41,7 +41,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             src="https://www.googletagmanager.com/ns.html?id=GTM-W9TD9DPM"
             height="0"
             width="0"
-            style={{ display: "none", visibility: "hidden" }}
+            style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
         {children}
