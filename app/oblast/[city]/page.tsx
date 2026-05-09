@@ -160,7 +160,7 @@ export default async function CityPage({ params }: Props) {
           <div className="max-w-4xl mx-auto px-4 flex flex-col gap-8">
             <article className="prose prose-slate max-w-none">
               <h2 className="text-2xl sm:text-3xl font-black text-[#1E3A5F] mb-4">
-                Евакуатор у {city.nameGen} та області
+                Евакуатор у {city.nameLoc} та області
               </h2>
               <div className="flex flex-col gap-4 text-gray-600 text-base leading-relaxed">
                 <p>
@@ -185,7 +185,7 @@ export default async function CityPage({ params }: Props) {
               </h3>
               <p>
                 Оплата виключно <strong>після доставки автомобіля</strong> до
-                місця призначення. Вартість евакуатора у {city.nameGen}{" "}
+                місця призначення. Вартість евакуатора у {city.nameLoc}{" "}
                 погоджується до виїзду — ніяких прихованих платежів.
               </p>
               <a

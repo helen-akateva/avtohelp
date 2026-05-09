@@ -16,6 +16,7 @@ import {
   WHATSAPP_LINK,
 } from "@/lib/constants";
 import Image from "next/image";
+import ServiceZones from "@/components/sections/ServiceZones";
 
 type Props = {
   params: Promise<{ district: string }>;
@@ -42,7 +43,7 @@ export default async function DistrictPage({ params }: Props) {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "AvtoHelp",
-    description: `Евакуатор у ${district.nameGen} районі Києва — виклик 24/7`,
+    description: `Евакуатор у ${district.nameLoc} районі Києва — виклик 24/7`,
     telephone: "+380930951282",
     areaServed: {
       "@type": "AdministrativeArea",
@@ -64,7 +65,7 @@ export default async function DistrictPage({ params }: Props) {
           <div className="absolute inset-0 z-0">
             <Image
               src="/images/1.webp"
-              alt={`Послуги евакуатора у ${district.nameGen} районі`}
+              alt={`Послуги евакуатора у ${district.nameLoc} районі`}
               fill
               priority
               className="object-cover opacity-30"
@@ -159,6 +160,7 @@ export default async function DistrictPage({ params }: Props) {
         <TrustBadges />
         <Prices />
         <Services />
+        <ServiceZones />
 
         <section className="bg-white py-12">
           <div className="max-w-4xl mx-auto px-4">
