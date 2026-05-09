@@ -166,12 +166,12 @@ export default async function DistrictPage({ params }: Props) {
           <div className="max-w-4xl mx-auto px-4">
             <article className="flex flex-col gap-6">
               <h2 className="text-2xl sm:text-3xl font-black text-[#1E3A5F]">
-                Евакуатор у {district.nameGen} районі Києва
+                Евакуатор у {district.nameLoc} районі Києва
               </h2>
               <div className="flex flex-col gap-4 text-gray-600 text-base leading-relaxed">
                 <p>
                   Компанія <strong>AvtoHelp</strong> надає професійні послуги
-                  евакуатора у <strong>{district.name} районі Києва</strong>{" "}
+                  евакуатора у <strong>{district.nameLoc} районі Києва</strong>{" "}
                   цілодобово — без вихідних та перерв. Середній час подачі у
                   цьому районі становить <strong>15–40 хвилин</strong>.
                 </p>
@@ -190,7 +190,7 @@ export default async function DistrictPage({ params }: Props) {
               aria-labelledby="cta-heading"
             >
               <p id="cta-heading" className="font-black text-xl">
-                Потрібен евакуатор у {district.name} районі?
+                Потрібен евакуатор у {district.nameLoc} районі?
               </p>
             <p>
           Оплата виключно <strong>після доставки автомобіля</strong> до місця призначення.

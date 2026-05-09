@@ -42,7 +42,7 @@ export default async function CityPage({ params }: Props) {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "AvtoHelp",
-    description: `Евакуатор у ${city.nameGen} — виклик 24/7 по Київській області`,
+    description: `Евакуатор у ${city.nameLoc} — виклик 24/7 по Київській області`,
     telephone: "+380930951282",
     areaServed: {
       "@type": "City",
@@ -165,7 +165,7 @@ export default async function CityPage({ params }: Props) {
               <div className="flex flex-col gap-4 text-gray-600 text-base leading-relaxed">
                 <p>
                   Компанія <strong>AvtoHelp</strong> надає професійні послуги
-                  евакуатора у <strong>{city.name}</strong> та по всій Київській
+                  евакуатора у <strong>{city.nameLoc}</strong> та по всій Київській
                   області — цілодобово. Ми забезпечуємо швидкий виїзд
                   спецтехніки навіть у віддалені населені пункти області.
                 </p>
@@ -181,7 +181,7 @@ export default async function CityPage({ params }: Props) {
 
             <aside className="p-8 bg-[#1E3A5F] rounded-3xl text-white text-center flex flex-col items-center gap-4 shadow-xl">
               <h3 className="font-black text-xl sm:text-2xl text-white">
-                Потрібен евакуатор у {city.name}?
+                Потрібен евакуатор у {city.nameLoc}?
               </h3>
               <p>
                 Оплата виключно <strong>після доставки автомобіля</strong> до
