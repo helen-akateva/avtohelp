@@ -16,6 +16,7 @@ import {
   WHATSAPP_LINK,
 } from "@/lib/constants";
 import Image from "next/image";
+import ServiceZones from "@/components/sections/ServiceZones";
 
 type Props = {
   params: Promise<{ city: string }>;
@@ -153,6 +154,7 @@ export default async function CityPage({ params }: Props) {
         <TrustBadges />
         <Prices />
         <Services />
+        <ServiceZones />
 
         <section className="bg-white py-12">
           <div className="max-w-4xl mx-auto px-4 flex flex-col gap-8">

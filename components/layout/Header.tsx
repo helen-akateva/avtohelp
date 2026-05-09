@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { Phone, Menu, X } from "lucide-react";
@@ -12,13 +13,6 @@ import {
   WHATSAPP_LINK,
 } from "@/lib/constants";
 
-const navLinks = [
-  { name: "Послуги", href: "/#services" },
-  { name: "Ціни", href: "/#prices" },
-  { name: "Локації", href: "/#zones" },
-  { name: "FAQ", href: "/#faq" },
-];
-
 const messengers = [
   { href: VIBER_LINK, icon: "/icons/viber.svg", label: "Viber" },
   { href: WHATSAPP_LINK, icon: "/icons/whatsapp.svg", label: "WhatsApp" },
@@ -27,7 +21,16 @@ const messengers = [
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
-
+  const pathname = usePathname();
+  const isSubPage =
+    pathname.startsWith("/oblast/") || pathname.startsWith("/kyiv/");
+  const p = (anchor: string) => (isSubPage ? `#${anchor}` : `/#${anchor}`);
+  const navLinks = [
+    { name: "Послуги", href: p("services") },
+    { name: "Ціни", href: p("prices") },
+    { name: "Локації", href: p("zones") },
+    { name: "FAQ", href: p("faq") },
+  ];
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) setIsOpen(false);

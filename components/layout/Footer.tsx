@@ -1,5 +1,6 @@
 import { Phone, Clock } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   PHONE_DISPLAY,
   PHONE_LINK,
@@ -15,18 +16,16 @@ const messengers = [
 ];
 
 const navLinks = [
-  { name: "Послуги", href: "/#services" },
-  { name: "Ціни", href: "/#prices" },
-  { name: "Локації", href: "/#zones" },
-  { name: "FAQ", href: "/#faq" },
+  { name: "Послуги", href: "#services" },
+  { name: "Ціни", href: "#prices" },
+  { name: "Локації", href: "#zones" },
+  { name: "FAQ", href: "#faq" },
 ];
 
 export default function Footer() {
   return (
     <footer className="bg-[#0f2337] text-white">
-
       <div className="max-w-7xl mx-auto px-4 py-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
-
         <section className="flex flex-col gap-4">
           <div>
             <div className="text-2xl font-black">
@@ -38,9 +37,10 @@ export default function Footer() {
             </p>
           </div>
           <p className="text-white/60 text-sm leading-relaxed">
-            Професійні послуги евакуатора у Києві та Київській області. Швидко, прозоро, цілодобово.
+            Професійні послуги евакуатора у Києві та Київській області. Швидко,
+            прозоро, цілодобово.
           </p>
-          
+
           <nav aria-label="Наші месенджери">
             <ul className="flex gap-3 mt-2 list-none p-0">
               {messengers.map((m) => (
@@ -52,7 +52,13 @@ export default function Footer() {
                     className="block hover:scale-110 transition-transform"
                     aria-label={`Ми у ${m.label}`}
                   >
-                    <Image src={m.icon} alt="" width={32} height={32} unoptimized />
+                    <Image
+                      src={m.icon}
+                      alt=""
+                      width={32}
+                      height={32}
+                      unoptimized
+                    />
                   </a>
                 </li>
               ))}
@@ -67,12 +73,12 @@ export default function Footer() {
           <ul className="flex flex-col gap-3 list-none p-0 m-0">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <a
+                <Link
                   href={link.href}
                   className="text-white/60 hover:text-[#F97316] transition-colors text-sm"
                 >
                   {link.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -82,13 +88,14 @@ export default function Footer() {
           <h3 className="font-black text-white text-sm uppercase tracking-wider">
             Контакти
           </h3>
-          
-          <a
-            href={PHONE_LINK}
-            className="flex items-center gap-3 group"
-          >
+
+          <a href={PHONE_LINK} className="flex items-center gap-3 group">
             <div className="w-10 h-10 rounded-xl bg-[#F97316] flex items-center justify-center flex-shrink-0">
-              <Phone size={18} className="fill-white text-white" aria-hidden="true" />
+              <Phone
+                size={18}
+                className="fill-white text-white"
+                aria-hidden="true"
+              />
             </div>
             <div>
               <p className="text-xs text-white/60">Телефон</p>

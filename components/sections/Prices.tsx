@@ -5,12 +5,12 @@ const priceRows = [
   {
     type: "По Київу та Київській області",
     base: "від 1500 до 2500 грн",
-    perKm: "70 грн/км",
+    perKm: "50 грн/км",
   },
   {
     type: "Перевезення понад 500 км",
     base: "без фіксованої подачі",
-    perKm: "від 25 грн/км",
+    perKm: "від 20 грн/км",
   },
 ];
 
@@ -20,11 +20,16 @@ const lafetaFeatures = [
   "Ціна — уточнюється індивідуально при замовленні",
 ];
 
+const poputniyFeatures = [
+  "Евакуатор повертається з виконаного замовлення — забирає авто попутно",
+  "Ціна значно нижча за стандартний виклик — узгоджується індивідуально",
+  "Уточнюйте наявність попутного евакуатора по телефону",
+];
+
 export default function Prices() {
   return (
     <section id="prices" className="bg-[#F0F4F8] py-12 lg:py-24">
       <div className="max-w-4xl mx-auto px-4">
-        
         <header className="text-center mb-8">
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-[#1E3A5F] mb-3">
             Вартість евакуатора
@@ -39,9 +44,15 @@ export default function Prices() {
             <table className="w-full text-left border-collapse table-fixed sm:table-auto">
               <thead className="bg-[#1E3A5F] text-white">
                 <tr>
-                  <th className="px-4 py-4 md:px-8 md:py-6 text-[10px] md:text-sm font-bold uppercase tracking-wider w-[40%]">Тип</th>
-                  <th className="px-2 py-4 md:px-6 md:py-6 text-[10px] md:text-sm font-bold uppercase tracking-wider text-center w-[30%]">Подача</th>
-                  <th className="px-4 py-4 md:px-8 md:py-6 text-[10px] md:text-sm font-bold uppercase tracking-wider text-right w-[30%]">За км</th>
+                  <th className="px-4 py-4 md:px-8 md:py-6 text-[10px] md:text-sm font-bold uppercase tracking-wider w-[40%]">
+                    Тип
+                  </th>
+                  <th className="px-2 py-4 md:px-6 md:py-6 text-[10px] md:text-sm font-bold uppercase tracking-wider text-center w-[30%]">
+                    Подача
+                  </th>
+                  <th className="px-4 py-4 md:px-8 md:py-6 text-[10px] md:text-sm font-bold uppercase tracking-wider text-right w-[30%]">
+                    За км
+                  </th>
                 </tr>
               </thead>
               <tbody className="text-[#1E3A5F]">
@@ -62,18 +73,41 @@ export default function Prices() {
             </table>
           </div>
 
-          <div className="px-6 py-6 md:px-10 md:py-10 border-t border-gray-50">
-            <h3 className="text-[#1E3A5F] font-black text-sm md:text-xl mb-4 flex items-center gap-2">
-              <span className="text-[#F97316]">TOP</span> Додаткова послуга — Лафета:
-            </h3>
-            <ul className="space-y-2 md:space-y-4">
-              {lafetaFeatures.map((feature, i) => (
-                <li key={i} className="flex items-start gap-2 text-gray-600 text-xs sm:text-lg">
-                  <span className="text-[#F97316] font-bold">•</span>
-                  {feature}
-                </li>
-              ))}
-            </ul>
+          <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-gray-100 border-t border-gray-50">
+            <div className="px-2 py-2 md:px-4 md:py-4">
+              <h3 className="text-[#1E3A5F] font-black text-sm md:text-xl mb-4 flex items-center gap-2">
+                <span className="text-[#F97316]">TOP</span>
+                Лафета:
+              </h3>
+              <ul className="space-y-2 md:space-y-3">
+                {lafetaFeatures.map((feature, i) => (
+                  <li
+                    key={i}
+                    className="flex items-start gap-2 text-gray-600 text-xs sm:text-base"
+                  >
+                    <span className="text-[#F97316] font-bold">•</span>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="px-2 py-2 md:px-4 md:py-4">
+              <h3 className="text-[#1E3A5F] font-black text-sm md:text-xl mb-4 flex items-center gap-2">
+                <span className="text-[#F97316]">💡</span> Попутний евакуатор:
+              </h3>
+              <ul className="space-y-2 md:space-y-3">
+                {poputniyFeatures.map((feature, i) => (
+                  <li
+                    key={i}
+                    className="flex items-start gap-2 text-gray-600 text-xs sm:text-base"
+                  >
+                    <span className="text-[#F97316] font-bold">•</span>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           <div className="px-3 py-8 md:px-12 md:py-12 bg-gray-50/50 border-t border-gray-100 flex flex-col items-center">
@@ -81,7 +115,12 @@ export default function Prices() {
               href={PHONE_LINK}
               className="flex items-center justify-center gap-2 bg-[#F97316] text-white font-black text-[13px] xs:text-[14px] sm:text-xl lg:text-2xl py-4 md:py-6 w-full rounded-2xl md:rounded-3xl shadow-lg shadow-orange-100 whitespace-nowrap px-2"
             >
-              <Phone size={20} fill="white" strokeWidth={0} className="shrink-0 w-4 h-4 sm:w-6 sm:h-6" />
+              <Phone
+                size={20}
+                fill="white"
+                strokeWidth={0}
+                className="shrink-0 w-4 h-4 sm:w-6 sm:h-6"
+              />
               <span>Замовити: {PHONE_DISPLAY}</span>
             </a>
             <p className="text-center text-gray-400 text-[10px] md:text-xs mt-4 uppercase font-bold tracking-widest">
@@ -89,7 +128,6 @@ export default function Prices() {
             </p>
           </div>
         </article>
-
       </div>
     </section>
   );
