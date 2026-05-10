@@ -130,7 +130,7 @@ export default async function OblastPage({ params }: Props) {
                 Де працює евакуатор
               </h2>
               <p className="text-gray-500 text-lg max-w-2xl mx-auto">
-                Працюємо по всій {region.nameGen} — виїжджаємо до будь-якого
+                Працюємо по всій {region.nameLoc} — виїжджаємо до будь-якого
                 населеного пункту. Нижче вказані основні міста, але якщо вашого
                 міста немає у списку — телефонуйте, уточнимо можливість виїзду.
               </p>
