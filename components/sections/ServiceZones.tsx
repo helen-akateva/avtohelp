@@ -1,3 +1,8 @@
+import Link from "next/link";
+import { ukraineRegions } from "@/lib/data/ukraine-regions";
+
+const activeRegions = ukraineRegions.filter((r) => r.active);
+
 const kyivDistricts = [
   "Святошинський",
   "Дарницький",
@@ -141,6 +146,28 @@ export default function ServiceZones() {
             </div>
           </figure>
         </div>
+        <aside className="bg-white rounded-3xl p-6 border border-[#F97316]/30 shadow-sm mt-6">
+          <p className="font-black text-[#1E3A5F] text-lg mb-3">
+            🇺🇦 Також працюємо по всій Україні
+          </p>
+          <div className="flex flex-wrap gap-2 mb-4">
+            {activeRegions.slice(0, 8).map((r) => (
+              <Link
+                key={r.slug}
+                href={`/ukraine/${r.slug}`}
+                className="px-3 py-1.5 bg-[#F0F4F8] text-[#1E3A5F] text-sm font-semibold rounded-lg border border-gray-100 hover:border-[#F97316]/40 hover:bg-orange-50 transition-colors"
+              >
+                {r.center.name}
+              </Link>
+            ))}
+          </div>
+          <Link
+            href="/ukraine"
+            className="text-[#F97316] font-bold text-sm hover:underline"
+          >
+            Переглянути всі області →
+          </Link>
+        </aside>
       </div>
     </section>
   );

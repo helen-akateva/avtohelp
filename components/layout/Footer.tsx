@@ -32,9 +32,9 @@ export default function Footer() {
               <span className="text-white">Avto</span>
               <span className="text-[#F97316]">Help</span>
             </div>
-            <p className="text-white/60 text-xs uppercase tracking-wider mt-1">
-              Евакуатор Київ та Київська область
-            </p>
+            <span className="text-[10px] text-[#F97316] uppercase tracking-tighter font-bold">
+              Евакуатор по всій Україні
+            </span>
           </div>
           <p className="text-white/60 text-sm leading-relaxed">
             Професійні послуги евакуатора у Києві та Київській області. Швидко,

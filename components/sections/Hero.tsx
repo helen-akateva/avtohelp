@@ -10,7 +10,7 @@ import {
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden min-h-[100svh] sm:min-h-[90vh] flex items-center bg-[#1E3A5F]">
+    <section className="relative overflow-hidden min-h-[100svh] flex items-center bg-[#1E3A5F]">
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/1.webp"

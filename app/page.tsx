@@ -16,7 +16,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "AvtoHelp",
-  "description": "Евакуатор Київ та Київська область — виклик 24/7. Подача від 1500 грн, 70 грн/км.",
+  "description": "Евакуатор Київ та Київська область — виклик 24/7. Подача від 1500 грн, 50 грн/км.",
   "url": "https://avtohelp.ua",
   "telephone": "+380930951282",
   "priceRange": "від 1500 грн",

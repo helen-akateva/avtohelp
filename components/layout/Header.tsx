@@ -23,7 +23,8 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
   const isSubPage =
-    pathname.startsWith("/oblast/") || pathname.startsWith("/kyiv/");
+    pathname.startsWith("/oblast/") || pathname.startsWith("/kyiv/") ||
+  pathname.startsWith("/ukraine/");
   const p = (anchor: string) => (isSubPage ? `#${anchor}` : `/#${anchor}`);
   const navLinks = [
     { name: "Послуги", href: p("services") },
@@ -57,7 +58,7 @@ export default function Header() {
               <span className="text-[#F97316]">Help</span>
             </div>
             <span className="text-[10px] text-[#F97316] uppercase tracking-tighter font-bold">
-              Евакуатор Київ та область
+              Евакуатор по всій Україні
             </span>
           </Link>
 

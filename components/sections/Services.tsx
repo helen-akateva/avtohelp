@@ -81,7 +81,7 @@ export default function Services() {
 
         <div>
           <h3 className="text-2xl font-black text-[#1E3A5F] mb-8 text-center">
-            Фото наших робіт
+            Як ми працюємо
           </h3>
 
           <Swiper
@@ -124,7 +124,7 @@ export default function Services() {
           width: 42px !important;
           height: 42px !important;
           border-radius: 12px;
-         
+
           box-shadow: none;
         }
         .swiper-button-next::after,
