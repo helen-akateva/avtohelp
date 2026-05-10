@@ -42,7 +42,7 @@ export default function Hero() {
           <p className="text-base sm:text-xl text-white/80 font-medium">
             Подача від{" "}
             <strong className="text-white font-black">1500 грн</strong> ·{" "}
-            <strong className="text-white font-black">70 грн/км</strong> · Без
+            <strong className="text-white font-black">50 грн/км</strong> · Без
             вихідних
           </p>
 
