@@ -24,7 +24,7 @@ export default function Header() {
   const pathname = usePathname();
   const isSubPage =
     pathname.startsWith("/oblast/") || pathname.startsWith("/kyiv/") ||
-  pathname.startsWith("/ukraine/");
+  pathname.startsWith("/ukraine");
   const p = (anchor: string) => (isSubPage ? `#${anchor}` : `/#${anchor}`);
   const navLinks = [
     { name: "Послуги", href: p("services") },
@@ -49,7 +49,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 py-3 lg:py-0 lg:h-20 flex flex-col lg:flex-row lg:items-center justify-between gap-3 relative">
         <div className="flex items-center justify-between w-full lg:w-auto gap-4">
           <Link
-            href="/"
+            href="/ukraine"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="flex flex-col leading-tight z-[60] flex-shrink-0"
           >
